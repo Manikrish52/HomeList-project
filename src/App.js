@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import { Grid } from "@mui/material";
+import "./App.css";
+import Header from "./Components/Header/Header";
+import NavBar from "./Components/NavBar/NavBar";
+import BodyContent from "./Components/Bodycontent/BodyContent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Grid sx={{ height: "100dvh", overflowY: "auto" }}>
+      {/* Header Content */}
+      <Grid
+        sx={{
+          width: "100%",
+          position: "sticky",
+          top: "0",
+          backgroundColor: "#fff",
+          zIndex: "1",
+        }}
+      >
+        <Header />
+      </Grid>
+      {/* navbar content */}
+      <Grid
+        sx={{
+          width: "100%",
+          position: "sticky",
+          top: { xs: "110px", md: "43px" },
+          backgroundColor: "#fff",
+          zIndex: "1",
+        }}
+      >
+        <NavBar />
+      </Grid>
+      {/* body content */}
+
+      <Grid
+        sx={{
+          overflowY: "auto",
+          zIndex: "-2",
+          marginBottom: "40px",
+        }}
+      >
+        <BodyContent />
+      </Grid>
+    </Grid>
   );
 }
 
