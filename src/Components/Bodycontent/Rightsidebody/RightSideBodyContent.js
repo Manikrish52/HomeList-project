@@ -16,6 +16,11 @@ import TabContent from "./TabContent";
 import SearchContent from "./SearchContent";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
+// images
+import FirstIamge from "../../Images/image1.avif";
+import SecondImage from "../../Images/image2.avif";
+import ThirdImage from "../../Images/image3.webp";
+import FourthImage from "../../Images/images4.jpg";
 // product  data
 const products = [
   {
@@ -25,7 +30,7 @@ const products = [
     price: 34.5,
     oldPrice: 49.99,
     shipping: "Free shipping",
-    image: "https://via.placeholder.com/100x100?text=Backpack",
+    image: FirstIamge,
     description:
       "Short description about the product goes here, for ex its features. Lorem ipsum dolor sit amet with hapti you onter into any new area of science, you almost lorem ipsum is great text consectetur adipisicing",
   },
@@ -36,7 +41,7 @@ const products = [
     price: 34.5,
     oldPrice: 49.99,
     shipping: "Paid shipping",
-    image: "https://via.placeholder.com/100x100?text=Shorts",
+    image: SecondImage,
     description:
       "Re-engineered Digital Crown with hapti Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua tempor incididunt ut labore et dolore magna [..]",
   },
@@ -47,7 +52,7 @@ const products = [
     price: 99.5,
     oldPrice: null,
     shipping: "Free shipping",
-    image: "https://via.placeholder.com/100x100?text=Tshirt1",
+    image: ThirdImage,
     description:
       "Short description about the product goes horn, for ex Its features. Lorem ipsum dolor sit amet with hapti you enter into any new area of science, you almost lorem.Ipsum is great text consectetur adipisicing",
   },
@@ -58,7 +63,7 @@ const products = [
     price: 140,
     oldPrice: 190,
     shipping: "Free shipping",
-    image: "https://via.placeholder.com/100x100?text=Jacket",
+    image: FourthImage,
     description:
       "Short description about the product goes here, for ex its features. Lorem ipsum dolor sit amet with hapti you enter into any new area of science, you almost lorem ipsum is great text",
   },
@@ -69,7 +74,7 @@ const products = [
     price: 99.5,
     oldPrice: 190,
     shipping: "Free shipping",
-    image: "https://via.placeholder.com/100x100?text=Tshirt2",
+    image: ThirdImage,
     description:
       "Short description about the product goes here, for ex Its features. Lorem ipsum dolor sit amet with hapti you enter into any new area of science, you almost lorem ipsum is great text",
   },
@@ -80,7 +85,8 @@ const products = [
     price: 99.5,
     oldPrice: 190,
     shipping: "Free shipping",
-    image: "https://via.placeholder.com/100x100?text=Tshirt2",
+    image: FirstIamge,
+
     description:
       "Short description about the product goes here, for ex Its features. Lorem ipsum dolor sit amet with hapti you enter into any new area of science, you almost lorem ipsum is great text",
   },
@@ -91,7 +97,7 @@ const products = [
     price: 34.5,
     oldPrice: 49.99,
     shipping: "Free shipping",
-    image: "https://via.placeholder.com/100x100?text=Backpack",
+    image: ThirdImage,
     description:
       "Short description about the product goes here, for ex its features. Lorem ipsum dolor sit amet with hapti you onter into any new area of science, you almost lorem ipsum is great text consectetur adipisicing",
   },
@@ -102,7 +108,7 @@ const products = [
     price: 34.5,
     oldPrice: 49.99,
     shipping: "Paid shipping",
-    image: "https://via.placeholder.com/100x100?text=Shorts",
+    image: SecondImage,
     description:
       "Re-engineered Digital Crown with hapti Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua tempor incididunt ut labore et dolore magna [..]",
   },
@@ -113,7 +119,7 @@ const products = [
     price: 99.5,
     oldPrice: null,
     shipping: "Free shipping",
-    image: "https://via.placeholder.com/100x100?text=Tshirt1",
+    image: FirstIamge,
     description:
       "Short description about the product goes horn, for ex Its features. Lorem ipsum dolor sit amet with hapti you enter into any new area of science, you almost lorem.Ipsum is great text consectetur adipisicing",
   },
@@ -124,7 +130,7 @@ const products = [
     price: 140,
     oldPrice: 190,
     shipping: "Free shipping",
-    image: "https://via.placeholder.com/100x100?text=Jacket",
+    image: FourthImage,
     description:
       "Short description about the product goes here, for ex its features. Lorem ipsum dolor sit amet with hapti you enter into any new area of science, you almost lorem ipsum is great text",
   },
@@ -135,7 +141,7 @@ const products = [
     price: 99.5,
     oldPrice: 190,
     shipping: "Free shipping",
-    image: "https://via.placeholder.com/100x100?text=Tshirt2",
+    image: FirstIamge,
     description:
       "Short description about the product goes here, for ex Its features. Lorem ipsum dolor sit amet with hapti you enter into any new area of science, you almost lorem ipsum is great text",
   },
@@ -146,7 +152,7 @@ const products = [
     price: 99.5,
     oldPrice: 190,
     shipping: "Free shipping",
-    image: "https://via.placeholder.com/100x100?text=Tshirt2",
+    image: SecondImage,
     description:
       "Short description about the product goes here, for ex Its features. Lorem ipsum dolor sit amet with hapti you enter into any new area of science, you almost lorem ipsum is great text",
   },
@@ -208,16 +214,17 @@ const RightSideBodyContent = () => {
           <Grid size={activeTab === "tab2" ? 12 : 4} key={index}>
             <Card
               sx={{
-                border: "1px solid black",
-                padding: "20px",
+                border: "1px solid #d7cfcf",
+                padding: "10px",
                 paddingRight: "0px",
+                boxShadow: "none",
               }}
             >
               <Grid container>
                 <Grid size={activeTab === "tab1" ? 12 : 3}>
                   <CardMedia
                     component="img"
-                    sx={{ width: 100 }}
+                    sx={{}}
                     image={item.image}
                     alt={item.title}
                   />
