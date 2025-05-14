@@ -10,10 +10,13 @@ import {
   Pagination,
   Rating,
   IconButton,
+  Divider,
 } from "@mui/material";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import TabContent from "./TabContent";
+import SearchContent from "./SearchContent";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 
+// product  data
 const products = [
   {
     title: "Rucksack Backpack Jeans",
@@ -187,6 +190,10 @@ const RightSideBodyContent = () => {
           size={{ xs: 12, sm: 12, md: 6 }}
           sx={{ display: "flex", justifyContent: "end", mb: 3 }}
         >
+          {/* Search content */}
+          <SearchContent />
+          {/* tab  content*/}
+
           <TabContent
             activeTabs={activeTab}
             handleflexRow={handleflexRow}
@@ -194,8 +201,9 @@ const RightSideBodyContent = () => {
           />
         </Grid>
       </Grid>
-
-      <Grid container spacing={2}>
+      <Divider />
+      {/* list view */}
+      <Grid container spacing={2} mt={2}>
         {paginatedItems.map((item, index) => (
           <Grid size={activeTab === "tab2" ? 12 : 4} key={index}>
             <Card

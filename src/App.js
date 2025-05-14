@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./Components/Header/Header";
 import NavBar from "./Components/NavBar/NavBar";
 import BodyContent from "./Components/Bodycontent/BodyContent";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
@@ -41,7 +42,9 @@ function App() {
         }}
       >
         <BodyContent />
+        {/* footer content */}
       </Grid>
+      <Footer />
     </Grid>
   );
 }

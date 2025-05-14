@@ -97,7 +97,7 @@ const LeftSideBodyContent = () => {
         >
           <Typography
             component="span"
-            sx={{ margin: "0px", padding: "0px 20px" }}
+            sx={{ margin: "0px", padding: "0px 20px", color: "#A09187" }}
           >
             Related items
           </Typography>
@@ -106,6 +106,7 @@ const LeftSideBodyContent = () => {
           {relatedItems.map((item, index) => (
             <div
               key={index}
+              style={{ color: "rgb(101 98 98)", fontWeight: 600 }}
               className="text-gray-700 hover:underline cursor-pointer"
             >
               {item}
@@ -123,23 +124,40 @@ const LeftSideBodyContent = () => {
         >
           <Typography
             component="span"
-            sx={{ margin: "0px", padding: "0px 20px" }}
+            sx={{ margin: "0px", padding: "0px 20px", color: "#A09187" }}
           >
             Brands
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
           {brandState.map((brand, index) => (
-            <div key={index} className="flex items-center justify-between">
-              <label className="flex items-center space-x-2">
-                <input
-                  type="checkbox"
-                  checked={brand.selected}
-                  onChange={() => handleBrandChange(index)}
-                />
-                <span>{brand.name}</span>
-              </label>
-              <span className="bg-gray-200 px-2 rounded">{brand.count}</span>
+            <div
+              key={index}
+              className="flex items-center justify-between"
+              style={{ display: "flex", justifyContent: "space-between" }}
+            >
+              <Grid>
+                <label
+                  className="flex items-center space-x-2"
+                  style={{ color: "rgb(101 98 98)" }}
+                >
+                  <input
+                    type="checkbox"
+                    checked={brand.selected}
+                    onChange={() => handleBrandChange(index)}
+                  />
+
+                  <span>{brand.name}</span>
+                </label>
+              </Grid>
+              <Grid>
+                <span
+                  className="bg-gray-200 px-2 rounded"
+                  style={{ color: "rgb(101 98 98)" }}
+                >
+                  {brand.count}
+                </span>
+              </Grid>
             </div>
           ))}
         </AccordionDetails>
@@ -153,7 +171,7 @@ const LeftSideBodyContent = () => {
         >
           <Typography
             component="span"
-            sx={{ margin: "0px", padding: "0px 20px" }}
+            sx={{ margin: "0px", padding: "0px 20px", color: "#A09187" }}
           >
             Price
           </Typography>
@@ -218,7 +236,7 @@ const LeftSideBodyContent = () => {
         >
           <Typography
             component="span"
-            sx={{ margin: "0px", padding: "0px 20px" }}
+            sx={{ margin: "0px", padding: "0px 20px", color: "#A09187" }}
           >
             Size
           </Typography>
@@ -258,7 +276,7 @@ const LeftSideBodyContent = () => {
         >
           <Typography
             component="span"
-            sx={{ margin: "0px", padding: "0px 20px" }}
+            sx={{ margin: "0px", padding: "0px 20px", color: "#A09187" }}
           >
             Ratings
           </Typography>
