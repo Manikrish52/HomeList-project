@@ -1,70 +1,71 @@
-# Getting Started with Create React App
+This project is a hotel management web application built with Create React App, React, and Redux. It allows users to add, edit, search, and view hotels, complete with image uploads, geolocation, and SEO optimizations.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Features
+📝 Add/Edit Hotel Form
+A reusable form component to add or edit hotel information with validation:
 
-## Available Scripts
+Image Upload: Upload a hotel image with preview capability.
 
+Title: Text input for the hotel name.
+
+Description: Text area for hotel description.
+
+Latitude & Longitude: Inputs for location coordinates.
+
+Price: Number input with validation.
+
+Reusable Component: Used for both creating and editing hotels.
+
+📄 List Page with Pagination
+A user-friendly card layout to display hotel listings:
+
+Card Layout: Each hotel card includes an image, title, price, and description snippet.
+
+Search: Filter hotels by title.
+
+Filter: Narrow results by price range.
+
+Pagination: Paginated results for better UX.
+
+Edit/Delete Options:
+
+Edit opens the form in edit mode.
+
+Delete removes the hotel with a success popup.
+
+Detail Navigation: Clicking a card navigates to the detailed view.
+
+📍 Hotel Detail Page
+Full Detail Display: Shows complete information of the hotel.
+
+Map Integration: Renders the hotel location using the Geolocation API and provided coordinates.
+
+🔍 SEO Optimization
+React Helmet: Dynamic meta tags for better SEO.
+
+Alt Tags: All images include descriptive alt attributes for accessibility and SEO.
+
+Available Scripts
 In the project directory, you can run:
 
-### `npm start`
+npm start
+Runs the app in development mode at http://localhost:3000.
+Supports hot reloading and lint error reporting.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+npm test
+Launches the test runner in interactive watch mode.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm run build
+Builds the app for production with optimized assets and hashed filenames.
 
-### `npm test`
+npm run eject
+One-way operation! Copies all configurations and dependencies to your project for full control.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Learn More
+React Documentation
 
-### `npm run build`
+Redux Documentation
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+React Helmet
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Create React App Docs
