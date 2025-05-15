@@ -145,11 +145,8 @@ const LeftSideContent = () => {
                   <span>{brand?.name}</span>
                 </label>
               </Grid>
-              <Grid>
-                <span
-                  className="bg-gray-200 px-2 rounded"
-                  style={{ color: "rgb(101 98 98)" }}
-                >
+              <Grid sx={{ margin: "2px" }}>
+                <span className="bg-gray-200 px-2 rounded BrandCount_container">
                   {brand?.count}
                 </span>
               </Grid>
