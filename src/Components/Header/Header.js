@@ -22,7 +22,7 @@ const Header = () => {
   // mobile responsive
   const theme = useTheme();
 
-  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   // menu items
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -44,7 +44,7 @@ const Header = () => {
       }}
     >
       <Grid
-        size={{ xs: 2, sm: 6, md: 2 }}
+        size={{ xs: 2, sm: 2, md: 2 }}
         sx={{
           display: "flex",
           justifyContent: "end",

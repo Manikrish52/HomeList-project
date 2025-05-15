@@ -8,7 +8,7 @@ const NavBar = () => {
         height: "90px",
         backgroundColor: "#376EC8",
         paddingLeft: { xs: "3%", md: "5.5%", lg: "7.8%" },
-        paddingTop: { xs: "0px", md: "0px", lg: "18px" },
+        paddingTop: { xs: "0px", sm: "20px", md: "20px", lg: "18px" },
       }}
     >
       <Typography
