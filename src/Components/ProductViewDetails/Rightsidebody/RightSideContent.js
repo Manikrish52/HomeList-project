@@ -218,7 +218,7 @@ const RightSideContent = () => {
           size={{ xs: 12, sm: 9, md: 6 }}
           sx={{
             display: "flex",
-            justifyContent: { sx: "start", md: "center" },
+            justifyContent: { sx: "start", md: "end" },
             mb: 3,
           }}
         >
