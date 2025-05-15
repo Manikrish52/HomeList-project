@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   Box,
   Card,
@@ -14,13 +14,14 @@ import {
 } from "@mui/material";
 import TabContent from "./TabContent";
 import SearchContent from "./SearchContent";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+// icons
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
 // images
-import FirstIamge from "../../Images/image1.avif";
-import SecondImage from "../../Images/image2.avif";
-import ThirdImage from "../../Images/image3.webp";
-import FourthImage from "../../Images/images4.jpg";
+import FirstIamge from "../../../Assets/Images/image1.avif";
+import SecondImage from "../../../Assets/Images/image2.avif";
+import ThirdImage from "../../../Assets/Images/image3.webp";
+import FourthImage from "../../../Assets/Images/images4.jpg";
 // product  data
 const products = [
   {
@@ -158,12 +159,16 @@ const products = [
   },
 ];
 
-const RightSideBodyContent = () => {
-  // tabcontent
+const RightSideContent = () => {
+  // tabcontent state
   const [activeTab, setActiveTab] = useState("tab2");
+  // like state
+  const [likedIndices, setLikedIndices] = useState([]);
+
   const handleflexRow = () => {
     setActiveTab("tab2");
   };
+
   const handleflexColumn = () => {
     setActiveTab("tab1");
   };
@@ -176,7 +181,12 @@ const RightSideBodyContent = () => {
     (page - 1) * itemsPerPage,
     page * itemsPerPage
   );
-
+  // like toggle
+  const handleLikeToggle = (index) => {
+    setLikedIndices((prev) =>
+      prev.includes(index) ? prev.filter((i) => i !== index) : [...prev, index]
+    );
+  };
   return (
     <Box sx={{ padding: "0px 50px 0px 25px " }}>
       <Grid container>
@@ -198,8 +208,8 @@ const RightSideBodyContent = () => {
         >
           {/* Search content */}
           <SearchContent />
-          {/* tab  content*/}
 
+          {/* tab  content*/}
           <TabContent
             activeTabs={activeTab}
             handleflexRow={handleflexRow}
@@ -224,9 +234,8 @@ const RightSideBodyContent = () => {
                 <Grid size={activeTab === "tab1" ? 12 : 3}>
                   <CardMedia
                     component="img"
-                    sx={{}}
-                    image={item.image}
-                    alt={item.title}
+                    image={item?.image}
+                    alt={item?.title}
                   />
                 </Grid>
                 <Grid size={activeTab === "tab1" ? 12 : 6}>
@@ -246,11 +255,11 @@ const RightSideBodyContent = () => {
                           fontWeight: 600,
                         }}
                       >
-                        {item.title}
+                        {item?.title}
                       </Typography>
                       <Box display="flex" alignItems="center" gap={1}>
                         <Rating
-                          value={item.rating}
+                          value={item?.rating}
                           precision={0.5}
                           readOnly
                           size="small"
@@ -259,15 +268,15 @@ const RightSideBodyContent = () => {
                           <span
                             style={{ color: "#FFC107", paddingRight: "5px" }}
                           >
-                            {item.rating}
+                            {item?.rating}
                           </span>
                           <span style={{ color: "#ACABB3" }}>
-                            {item.orders} orders
+                            {item?.orders} orders
                           </span>
                         </Typography>
                       </Box>
                       <Typography variant="body2" color="text.secondary" my={1}>
-                        {item.description}
+                        {item?.description}
                       </Typography>
                     </CardContent>
                   </Box>
@@ -284,9 +293,9 @@ const RightSideBodyContent = () => {
                         sx={{ display: "flex", alignItems: "center", gap: 1 }}
                       >
                         <Typography variant="h6" color="#ABACAE">
-                          ${item.price}
+                          ${item?.price}
                         </Typography>
-                        {item.oldPrice && (
+                        {item?.oldPrice && (
                           <Grid>
                             <Typography
                               variant="body2"
@@ -296,7 +305,7 @@ const RightSideBodyContent = () => {
                                 fontSize: "12px",
                               }}
                             >
-                              ${item.oldPrice}
+                              ${item?.oldPrice}
                             </Typography>
                           </Grid>
                         )}
@@ -305,12 +314,12 @@ const RightSideBodyContent = () => {
                         <Typography
                           variant="body2"
                           color={
-                            item.shipping === "Free shipping"
+                            item?.shipping === "Free shipping"
                               ? "green"
                               : "orange"
                           }
                         >
-                          {item.shipping}
+                          {item?.shipping}
                         </Typography>
                       </Grid>
                     </Box>
@@ -324,13 +333,18 @@ const RightSideBodyContent = () => {
                         BUY THIS
                       </Button>
                       <IconButton
+                        key={index}
+                        onClick={() => handleLikeToggle(index)}
                         sx={{
                           padding: "2px 8px",
                           border: "1px solid #c0bcbc",
                           borderRadius: "4px",
+                          color: likedIndices.includes(index)
+                            ? "red"
+                            : "inherit",
                         }}
                       >
-                        <FavoriteBorderIcon />
+                        <FavoriteIcon />
                       </IconButton>
                     </Grid>
                   </Box>
@@ -353,4 +367,4 @@ const RightSideBodyContent = () => {
   );
 };
 
-export default RightSideBodyContent;
+export default RightSideContent;

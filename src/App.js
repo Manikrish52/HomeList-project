@@ -2,8 +2,8 @@ import { Grid } from "@mui/material";
 import "./App.css";
 import Header from "./Components/Header/Header";
 import NavBar from "./Components/NavBar/NavBar";
-import BodyContent from "./Components/Bodycontent/BodyContent";
 import Footer from "./Components/Footer/Footer";
+import ProductContent from "./Components/ProductViewDetails/ProductContent";
 
 function App() {
   return (
@@ -41,7 +41,7 @@ function App() {
           marginBottom: "40px",
         }}
       >
-        <BodyContent />
+        <ProductContent />
         {/* footer content */}
       </Grid>
       <Footer />

@@ -1,6 +1,6 @@
 import { Button, Grid } from "@mui/material";
 // images
-import MDBImage from "../../Components/Images/MDB image.png";
+import MDBImage from "../../Assets/Images/MDB image.png";
 // icons
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import PersonIcon from "@mui/icons-material/Person";
@@ -14,7 +14,7 @@ const Header = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        marginBottom:{xs:"1rem", md:"0rem"},
+        marginBottom: { xs: "1rem", md: "0rem" },
       }}
     >
       <Grid
@@ -24,19 +24,18 @@ const Header = () => {
           justifyContent: "end",
           alignItems: "center",
           paddingRight: "3rem",
-        marginBottom:{xs:"5px", md:"0rem"},
-
+          marginBottom: { xs: "5px", md: "0rem" },
         }}
       >
         <img src={MDBImage} alt="MDBImage" />
       </Grid>
-      <Grid size={{xs: 12, sm: 6, md: 5 }}
-      sx={{
-        marginBottom:{xs:"5px", md:"0rem"},
-          paddingLeft:"6rem",
-
-
-      }}>
+      <Grid
+        size={{ xs: 12, sm: 6, md: 5 }}
+        sx={{
+          marginBottom: { xs: "5px", md: "0rem" },
+          paddingLeft: "6rem",
+        }}
+      >
         <div className="search_container">
           <input type="text" placeholder="Search" className="search_input" />
           <button className="searchbutton_icon">
@@ -45,9 +44,13 @@ const Header = () => {
         </div>
       </Grid>
       <Grid
-        size={{xs: 12, sm: 6, md: 5 }}
-        sx={{ display: "flex", justifyContent:"center", paddingLeft:"75px",gap: "6px",
-       }}
+        size={{ xs: 12, sm: 6, md: 5 }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          paddingLeft: "75px",
+          gap: "6px",
+        }}
       >
         <Grid>
           <Button sx={{ textTransform: "none" }} className="Button_content">
@@ -70,7 +73,6 @@ const Header = () => {
                 fontSize: "18px",
                 fontWeight: "bold",
                 color: "#505150",
-
               }}
             />
             Wishlist

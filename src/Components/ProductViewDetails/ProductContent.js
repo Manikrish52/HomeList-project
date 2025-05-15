@@ -1,21 +1,23 @@
 import React from "react";
 import { Grid } from "@mui/material";
-import LeftSideBodyContent from "./LeftSideBodyContent";
-import RightSideBodyContent from "./Rightsidebody/RightSideBodyContent";
+import RightSideContent from "./Rightsidebody/RightSideContent";
+import LeftSideContent from "./LeftSideContent";
 
-const BodyContent = () => {
+const ProductContent = () => {
   return (
     <Grid sx={{ mt: "20px" }}>
       <Grid container>
         <Grid size={{ xs: 0, sm: 0, md: 0.9 }}></Grid>
         <Grid size={{ xs: 12, sm: 12, md: 2.5 }}>
-          <LeftSideBodyContent />
+          {/* LeftSideContent */}
+          <LeftSideContent />
         </Grid>
         <Grid size={{ xs: 12, sm: 12, md: 8 }}>
-          <RightSideBodyContent />
+          {/* RightSideContent */}
+          <RightSideContent />
         </Grid>
       </Grid>
     </Grid>
   );
 };
-export default BodyContent;
+export default ProductContent;

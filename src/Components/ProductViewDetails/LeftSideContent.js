@@ -11,22 +11,16 @@ import {
   Checkbox,
   Collapse,
   Grid,
-  IconButton,
   Rating,
   Slider,
   TextField,
 } from "@mui/material";
-// icons
-import StarIcon from "@mui/icons-material/Star";
 
-const LeftSideBodyContent = () => {
+const LeftSideContent = () => {
   // slider
   const [price, setPrice] = useState([0, 1000]);
-  const [open, setOpen] = useState(true);
-  // ratings
-  const [expanded, setExpanded] = useState(true);
-  const [value, setValue] = React.useState(2);
 
+  // ratings
   const relatedItems = [
     "Electronics",
     "Home items",
@@ -38,6 +32,7 @@ const LeftSideBodyContent = () => {
     "Accessories",
   ];
 
+  // brands
   const brands = [
     { name: "Mercedes", count: 120, selected: true },
     { name: "Toyota", count: 15, selected: true },
@@ -75,7 +70,7 @@ const LeftSideBodyContent = () => {
     }
   };
   // rating
-  const ratings = [5, 4, 3, 2]; // Show only 5 to 2 stars
+  const ratings = [5, 4, 3, 2];
   const [selectedRatings, setSelectedRatings] = useState([]);
 
   const handleToggle = (rating) => {
@@ -143,11 +138,11 @@ const LeftSideBodyContent = () => {
                 >
                   <input
                     type="checkbox"
-                    checked={brand.selected}
+                    checked={brand?.selected}
                     onChange={() => handleBrandChange(index)}
                   />
 
-                  <span>{brand.name}</span>
+                  <span>{brand?.name}</span>
                 </label>
               </Grid>
               <Grid>
@@ -155,7 +150,7 @@ const LeftSideBodyContent = () => {
                   className="bg-gray-200 px-2 rounded"
                   style={{ color: "rgb(101 98 98)" }}
                 >
-                  {brand.count}
+                  {brand?.count}
                 </span>
               </Grid>
             </div>
@@ -177,7 +172,7 @@ const LeftSideBodyContent = () => {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Collapse in={open}>
+          <Collapse in={true}>
             <Box sx={{ px: 1, pt: 2 }}>
               <Slider
                 value={price}
@@ -203,7 +198,7 @@ const LeftSideBodyContent = () => {
                 <Grid sx={{ width: "100%" }}>
                   <Grid sx={{ color: "black", fontWeight: 600 }}>Max</Grid>
                   <TextField
-                    value={`$${price[1].toLocaleString()}`}
+                    value={`$${price[1]?.toLocaleString()}`}
                     onChange={handleMaxChange}
                     variant="outlined"
                     size="small"
@@ -216,9 +211,6 @@ const LeftSideBodyContent = () => {
                 variant="outlined"
                 fullWidth
                 sx={{ mt: 2, color: "#000", borderColor: "gray" }}
-                // onClick={() =>
-                //   alert(`Applied price: $${price[0]} - $${price[1]}`)
-                // }
               >
                 APPLY
               </Button>
@@ -282,11 +274,11 @@ const LeftSideBodyContent = () => {
           </Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Collapse in={expanded}>
+          <Collapse in={true}>
             {ratings.map((value) => (
               <Box key={value} display="flex" alignItems="center">
                 <Checkbox
-                  checked={selectedRatings.includes(value)}
+                  checked={selectedRatings?.includes(value)}
                   onChange={() => handleToggle(value)}
                 />
                 <Rating value={value} />
@@ -298,4 +290,4 @@ const LeftSideBodyContent = () => {
     </div>
   );
 };
-export default LeftSideBodyContent;
+export default LeftSideContent;
