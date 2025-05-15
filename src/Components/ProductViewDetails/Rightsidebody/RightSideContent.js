@@ -221,7 +221,10 @@ const RightSideContent = () => {
       {/* list view */}
       <Grid container spacing={2} mt={2}>
         {paginatedItems.map((item, index) => (
-          <Grid size={activeTab === "tab2" ? 12 : 4} key={index}>
+          <Grid
+            size={activeTab === "tab2" ? 12 : { xs: 12, lg: 4 }}
+            key={index}
+          >
             <Card
               sx={{
                 border: "1px solid #d7cfcf",
@@ -231,14 +234,14 @@ const RightSideContent = () => {
               }}
             >
               <Grid container>
-                <Grid size={activeTab === "tab1" ? 12 : 3}>
+                <Grid size={activeTab === "tab1" ? 12 : { xs: 12, lg: 6 }}>
                   <CardMedia
                     component="img"
                     image={item?.image}
                     alt={item?.title}
                   />
                 </Grid>
-                <Grid size={activeTab === "tab1" ? 12 : 6}>
+                <Grid size={activeTab === "tab1" ? 12 : { xs: 12, lg: 6 }}>
                   <Box
                     sx={{
                       display: "flex",
@@ -281,7 +284,7 @@ const RightSideContent = () => {
                     </CardContent>
                   </Box>
                 </Grid>
-                <Grid size={activeTab === "tab1" ? 12 : 3}>
+                <Grid size={activeTab === "tab1" ? 12 : { xs: 12, md: 3 }}>
                   <Box
                     display="flex"
                     flexDirection="column"

@@ -29,59 +29,35 @@ const Footer = () => {
             </Link>
           </Typography>
         </Grid>
-
+        {/* store */}
         <Grid size={{ xs: 12, sm: 6, md: 2 }}>
           <Typography variant="subtitle1" fontWeight="bold">
             STORE
           </Typography>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            About us
-          </Grid>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            Find store
-          </Grid>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            Categories
-          </Grid>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            Blogs
-          </Grid>
+          <Grid className="Footer_lable">About us</Grid>
+          <Grid className="Footer_lable">Find store</Grid>
+          <Grid className="Footer_lable">Categories</Grid>
+          <Grid className="Footer_lable">Blogs</Grid>
         </Grid>
-
+        {/* information */}
         <Grid size={{ xs: 12, sm: 6, md: 2 }}>
           <Typography variant="subtitle1" fontWeight="bold">
             INFORMATION
           </Typography>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            Help center
-          </Grid>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            Money refund
-          </Grid>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            Shipping info
-          </Grid>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            Refunds
-          </Grid>
+          <Grid className="Footer_lable">Help center</Grid>
+          <Grid className="Footer_lable">Money refund</Grid>
+          <Grid className="Footer_lable">Shipping info</Grid>
+          <Grid className="Footer_lable">Refunds</Grid>
         </Grid>
-
+        {/* support */}
         <Grid size={{ xs: 12, sm: 6, md: 2 }}>
           <Typography variant="subtitle1" fontWeight="bold">
             SUPPORT
           </Typography>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            Help center
-          </Grid>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            Documents
-          </Grid>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            Account restore
-          </Grid>
-          <Grid sx={{ fontSize: "16px", color: "#d0c7c7", fontWeight: "600" }}>
-            My orders
-          </Grid>
+          <Grid className="Footer_lable">Help center</Grid>
+          <Grid className="Footer_lable">Documents</Grid>
+          <Grid className="Footer_lable">Account restore</Grid>
+          <Grid className="Footer_lable">My orders</Grid>
         </Grid>
 
         <Grid size={{ xs: 12, sm: 6, md: 3 }}>
@@ -98,6 +74,7 @@ const Footer = () => {
               variant="outlined"
               size="small"
               placeholder="Email"
+              className="Footer_textfield"
               sx={{
                 bgcolor: "#fff",
                 flexGrow: 1,

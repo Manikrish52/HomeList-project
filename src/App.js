@@ -25,7 +25,7 @@ function App() {
         sx={{
           width: "100%",
           position: "sticky",
-          top: { xs: "110px", md: "43px" },
+          top: { xs: "48px", md: "43px" },
           backgroundColor: "#fff",
           zIndex: "1",
         }}
