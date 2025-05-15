@@ -17,7 +17,10 @@ const SearchContent = () => {
       <FormControl
         className="search_content"
         placeholder="Best Match"
-        sx={{ width: "150px", padding: "0px 10px " }}
+        sx={{
+          width: "150px",
+          padding: { xs: "0px 10px 0px 0px", md: "0px 10px " },
+        }}
       >
         <Select value={bestMatch} onChange={handleChange}>
           <MenuItem value={bestMatch}>Best Match</MenuItem>

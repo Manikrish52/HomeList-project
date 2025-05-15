@@ -1,7 +1,7 @@
 import React from "react";
 import { Grid } from "@mui/material";
 import RightSideContent from "./Rightsidebody/RightSideContent";
-import LeftSideContent from "./LeftSideContent";
+import LeftSideContent from "./LeftSidebody/LeftSideContent";
 
 const ProductContent = () => {
   return (

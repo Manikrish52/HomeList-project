@@ -191,20 +191,36 @@ const RightSideContent = () => {
     <Box sx={{ padding: "0px 50px 0px 25px " }}>
       <Grid container>
         <Grid
-          size={{ xs: 12, sm: 12, md: 6 }}
-          sx={{ display: "flex", alignItems: "center" }}
+          size={{ xs: 12, sm: 3, md: 6 }}
+          sx={{
+            display: "flex",
+            alignItems: {
+              xs: "start",
+              md: "center",
+            },
+          }}
         >
           <Typography
             variant="h6"
             mb={2}
-            sx={{ color: "#858684", fontWeight: 500, fontSize: "16px" }}
+            sx={{
+              paddingTop: { xs: "10px", md: "0px" },
+
+              color: "#858684",
+              fontWeight: 500,
+              fontSize: "16px",
+            }}
           >
             {products.length} Items found
           </Typography>
         </Grid>
         <Grid
-          size={{ xs: 12, sm: 12, md: 6 }}
-          sx={{ display: "flex", justifyContent: "end", mb: 3 }}
+          size={{ xs: 12, sm: 9, md: 6 }}
+          sx={{
+            display: "flex",
+            justifyContent: { sx: "start", md: "center" },
+            mb: 3,
+          }}
         >
           {/* Search content */}
           <SearchContent />
