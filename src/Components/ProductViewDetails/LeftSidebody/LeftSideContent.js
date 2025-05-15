@@ -92,20 +92,31 @@ const LeftSideContent = () => {
   const theme = useTheme();
 
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const renderFilters = () => (
-    <div style={{ width: isMobile ? 280 : "auto" }}>
-      sd
-      {/* All your Accordion code goes here (related items, brand, price, size, ratings) */}
-      {/* Paste your current Accordion content here without changes */}
-    </div>
-  );
+
   return (
     <>
       {isMobile ? (
         <>
-          <IconButton onClick={() => setDrawerOpen(!drawerOpen)}>
-            <MenuIcon />
-          </IconButton>
+          <Grid
+            sx={{
+              position: "fixed",
+              top: "65px",
+              right: "10px",
+              zIndex: 1,
+            }}
+          >
+            <IconButton
+              sx={{
+                borderRadius: "100%",
+                width: "30px",
+                height: "30px",
+                backgroundColor: "#fff",
+              }}
+              onClick={() => setDrawerOpen(!drawerOpen)}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Grid>
           <Drawer
             anchor="left"
             open={drawerOpen}
