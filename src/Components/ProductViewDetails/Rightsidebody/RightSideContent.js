@@ -234,7 +234,7 @@ const RightSideContent = () => {
               }}
             >
               <Grid container>
-                <Grid size={activeTab === "tab1" ? 12 : { xs: 12, lg: 6 }}>
+                <Grid size={activeTab === "tab1" ? 12 : { xs: 12, lg: 3 }}>
                   <CardMedia
                     component="img"
                     image={item?.image}
